@@ -9,7 +9,7 @@ if __name__ == '__main__':
     builder.add_common_builds(shared_option_name='libwebp:shared', pure_c=True)
     filtered_builds = []
     for settings, options, env_vars, build_requires in builder.builds:
-        if (platform.system() == 'Windows' and options['libwebp:shared'] == False or
+        if (platform.system() == 'Windows' or
                 platform.system() == 'Linux' or
                 platform.system() == 'Darwin'
             ):

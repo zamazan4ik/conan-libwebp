@@ -12,11 +12,12 @@ if [[ "$(uname -s)" == 'Darwin' ]]; then
 	eval "$(pyenv init -)"
     fi
 
-    pyenv install 2.7.10
-    pyenv virtualenv 2.7.10 conan
+    pyenv install $PYTHON_VERSION
+    pyenv virtualenv $PYTHON_VERSION conan
     pyenv rehash
     pyenv activate conan
 fi
 
+pip install conan # this is a dependency workaround and can be removed in the future
 pip install conan_package_tools # It install conan too
 conan user

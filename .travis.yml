@@ -1,12 +1,12 @@
 env:
   global:
-  - CONAN_UPLOAD=1
-  - CONAN_REFERENCE="libwebp/next"
-  - CONAN_USERNAME="nunojpg"
-  - CONAN_CHANNEL="ci"
-  - CONAN_STABLE_BRANCH_PATTERN="release/*"
-  - CONAN_TOTAL_PAGES=1
-  - CONAN_CURRENT_PAGE=1
+  - CONAN_REFERENCE: "libwebp/next"
+  - CONAN_USERNAME: "nunojpg"
+  - CONAN_CHANNEL: "ci"
+  - CONAN_UPLOAD: "https://api.bintray.com/conan/nunojpg/conan-repo"
+  - CONAN_STABLE_BRANCH_PATTERN: "release/*"
+  - CONAN_TOTAL_PAGES: 1
+  - CONAN_CURRENT_PAGE: 1
 matrix:
   include:
   - os: linux

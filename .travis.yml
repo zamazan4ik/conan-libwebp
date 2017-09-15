@@ -17,9 +17,9 @@ matrix:
       - docker
     env: CONAN_GCC_VERSIONS=5.3 CONAN_USE_DOCKER=1
   - os: osx
-    osx_image: xcode8.2
     language: generic
-    env: PYTHON_VERSION=3.6.1
+    osx_image: xcode8.3
+    env: CONAN_APPLE_CLANG_VERSIONS=8.1 PYTHON_VERSION=3.6.1
 install:
 - "./.travis/install.sh"
 script:

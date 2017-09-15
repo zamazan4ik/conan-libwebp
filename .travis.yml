@@ -15,7 +15,7 @@ matrix:
     python: "3.6"
     services:
       - docker
-    env: CONAN_GCC_VERSIONS=5.3 CONAN_USE_DOCKER=1
+    env: CONAN_GCC_VERSIONS=5.4 CONAN_USE_DOCKER=1
   - os: osx
     language: generic
     osx_image: xcode8.3

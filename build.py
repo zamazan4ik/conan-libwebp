@@ -5,7 +5,7 @@ from conan.packager import ConanMultiPackager
 import platform
 
 if __name__ == '__main__':
-    builder = ConanMultiPackager(username='nunojpg')
+    builder = ConanMultiPackager(args="--build missing")
     builder.add_common_builds(shared_option_name='libwebp:shared', pure_c=True)
     filtered_builds = []
     for settings, options, env_vars, build_requires in builder.builds:

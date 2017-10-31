@@ -1,12 +1,12 @@
 from conans import ConanFile, CMake
 import os
 
-channel = os.getenv('CONAN_CHANNEL', 'ci')
-username = os.getenv('CONAN_USERNAME', 'nunojpg')
+channel = os.getenv('CONAN_CHANNEL', 'stable')
+username = os.getenv('CONAN_USERNAME', 'zamazan4ik')
 
 class RestbedTestConan(ConanFile):
     settings = 'os', 'compiler', 'build_type', 'arch'
-    requires = 'libwebp/next@%s/%s' % (username, channel)
+    requires = 'libwebp/0.6.0@%s/%s' % (username, channel)
     generators = 'cmake'
 
     def build(self):
